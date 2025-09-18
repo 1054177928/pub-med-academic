@@ -12,6 +12,50 @@ body {
     line-height: 1.6;
 }
 
+/* 强制所有元素使用边框盒模型（推荐） */
+* {
+  box-sizing: border-box;
+}
+
+/* 基础响应式规则 */
+body {
+  width: 100%;
+  max-width: 100%;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden; /* 防止横向滚动 */
+}
+
+/* 让所有块级元素和图片自适应 */
+div, section, article, header, footer, img, p {
+  max-width: 100%;
+  height: auto;
+}
+
+/* 简单媒体查询：手机屏幕（小于768px）时调整文字和间距 */
+@media (max-width: 768px) {
+  body {
+    font-size: 16px; /* 调小字体 */
+    line-height: 1.5; /* 增加行高 */
+  }
+  h1 {
+    font-size: 1.8rem; /* 调小标题 */
+  }
+}
+
+/* 让表格和表单也自适应 */
+table, input, textarea, select {
+  max-width: 100%;
+}
+
+/* 手机上的按钮更大 */
+@media (max-width: 768px) {
+  button, .btn {
+    padding: 12px;
+    font-size: 18px;
+  }
+}
+
 .center-flex {
   display: flex;
   justify-content: center;
